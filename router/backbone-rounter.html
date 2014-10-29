@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Learn backbbone rounter</title>
+</head>
+<body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://underscorejs.org/underscore.js"></script>
+<script type="text/javascript" src="http://backbonejs.org/backbone.js"></script>
+
+<script>
+	var Rounter = Backbone.Router.extend( {
+		routes: {
+			"*action" : "func" 
+		},
+		func : function(action) {
+			console.log(action);
+		}
+	});
+
+	var rounter = new Rounter();
+	Backbone.history.start();
+</script>
+
+</body>
+</html>
